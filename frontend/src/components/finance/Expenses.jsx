@@ -1,0 +1,6 @@
+import RecordPage from '../RecordPage';
+import { money, today } from '../../api';
+export default function Expenses({projects, reload, version}) {
+    const fields = [{key:'title',label:'Expense title'},{key:'category',label:'Category',options:['Software','Printing','Outsourcing','Transport','Marketing','Design resources','Other']},{key:'project_id',label:'Project (optional)',number:true,required:false,options:projects.filter(p=>!p.archived).map(p=>({value:p.id,label:p.title}))},{key:'amount',label:'Amount (LKR)',type:'number',min:.01,step:.01},{key:'expense_date',label:'Date paid',type:'date',max:today()},{key:'method',label:'Payment method',options:['Cash','Bank transfer','Card','Other']},{key:'notes',label:'Notes',required:false,multiline:true}];
+    return <RecordPage version={version} title="Expenses" singular="Expense" createLabel="Record Expense" description="Track paid business costs." path="/expenses" fields={fields} defaults={{project_id:null,expense_date:today(),method:'Bank transfer'}} columns={[{key:'title',label:'Expense'},{key:'category',label:'Category'},{key:'project_id',label:'Project',render:r=>projects.find(p=>p.id===r.project_id)?.title||'General business'},{key:'expense_date',label:'Date paid'},{key:'amount',label:'Amount',render:r=>money(r.amount)}]} onChange={reload} deleteRecord/>;
+}

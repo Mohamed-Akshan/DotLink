@@ -1,0 +1,161 @@
+# ==========================================
+# Environment variables and secrets
+# ==========================================
+
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+*.pem
+*.key
+*.p12
+*.pfx
+
+credentials.json
+secrets.json
+
+
+# ==========================================
+# Python virtual environments
+# ==========================================
+
+.venv/
+venv/
+env/
+ENV/
+
+
+# ==========================================
+# Python generated files
+# ==========================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+*.egg-info/
+.eggs/
+build/
+dist/
+
+
+# ==========================================
+# Python testing and development caches
+# ==========================================
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyright/
+.tox/
+.nox/
+
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+
+# ==========================================
+# Local databases
+# ==========================================
+
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite3-journal
+
+
+# ==========================================
+# Frontend dependencies
+# ==========================================
+
+node_modules/
+.pnpm-store/
+
+.yarn/cache/
+.yarn/unplugged/
+.yarn/install-state.gz
+.yarn/build-state.yml
+
+.pnp.*
+
+
+# ==========================================
+# Frontend generated files
+# ==========================================
+
+.vite/
+dist/
+dist-ssr/
+coverage/
+.cache/
+.eslintcache
+*.tsbuildinfo
+
+
+# ==========================================
+# Package manager logs
+# ==========================================
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# ==========================================
+# Application logs
+# ==========================================
+
+logs/
+*.log
+
+
+# ==========================================
+# Generated reports and documents
+# ==========================================
+
+backend/downloads/
+backend/reports/
+backend/generated/
+backend/uploads/
+
+
+# ==========================================
+# Temporary development scripts
+# ==========================================
+
+backend/test_langfuse.py
+*.tmp
+*.temp
+
+
+# ==========================================
+# Deployment
+# ==========================================
+
+.vercel/
+.netlify/
+
+
+# ==========================================
+# IDE and editor configurations
+# ==========================================
+
+.vscode/
+.idea/
+
+*.swp
+*.swo
+
+
+# ==========================================
+# Operating system files
+# ==========================================
+
+.DS_Store
+Thumbs.db
+Desktop.ini
