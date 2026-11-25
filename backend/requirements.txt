@@ -6,9 +6,11 @@ pydantic[email]>=2.10,<3
 python-dotenv>=1,<2
 PyJWT>=2.9,<3
 argon2-cffi>=23,<26
+
 langchain
 langgraph>=1,<2
 langchain-openai>=1,<2
 langchain-google-genai>=3,<5
-langfuse>=3,<4
+langfuse>=4.7.0,<5
+
 reportlab>=4,<5
